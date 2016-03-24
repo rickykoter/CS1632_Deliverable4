@@ -49,7 +49,7 @@ public class ArraysSortPropertyBasedTest {
 			// it did prior to sorting (originalArrayLength).
 			assertEquals(originalArrayLength, testArray.length);
 
-			// Test the pure propert by seeing if running the Arrays.sort() function on the same input a second
+			// Test the pure property by seeing if running the Arrays.sort() function on the same input a second
 			// time produces an array with the same values at the same index as the original.
 			Arrays.sort(testArrayPurity);
 			assertArrayEquals(testArray, testArrayPurity);
