@@ -19,8 +19,9 @@ public class ArraysSortPropertyBasedTest {
 
 		for (int i = 0; i < 100; i++) {
 			int length = Math.abs(r.nextInt(maxArraySize+1));
-			int[] testArray;
-			int[] testArrayPurity;
+			
+			int[] testArray; // Original input array
+			int[] testArrayPurity; // Clone of the original input array
 			
 			// Create two identical arrays of random size between 0 and 100,000,
 			// and populate them with the same random integers between Integer.MIN_VALUE and Integer.MAX_VALUE.
@@ -33,6 +34,8 @@ public class ArraysSortPropertyBasedTest {
 			}
 
 			int originalArrayLength = testArray.length;
+			
+			// Sort the testArray. testArray is now considered the output.
 			Arrays.sort(testArray);
 
 			// Test if each consecutive number greater than or equal to the
