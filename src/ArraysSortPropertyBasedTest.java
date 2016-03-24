@@ -5,7 +5,7 @@ import java.util.Random;
 import org.junit.Test;
 /**
  * Deliverable 4 - JUnit-based property-based tests
- * This test program generates 100 random arrays of random size an subjects each to a 
+ * This test program generates 100 random arrays of random size and subjects each to a 
  * set of three property-based test.
  * @author RichardKotermanski
  *
@@ -40,8 +40,9 @@ public class ArraysSortPropertyBasedTest {
 			// integer value.
 			int prevVal = Integer.MIN_VALUE;
 			for (int curVal : testArray) {
-				if (curVal < prevVal)
+				if (curVal < prevVal){
 					fail("The values " + curVal + " and " + prevVal + " are not in the correct, sorted order.");
+				}
 				prevVal = curVal;
 			}
 
